@@ -1,0 +1,9 @@
+<form action="{% url 'result' %}" method="get">
+    <input name="q" type="text" placeholder="Search...">
+</form>
+{% for auto in object_list %}
+<h1>{{ auto.name }}</h1>
+<img src="{{ auto.img.url}}" alt="{{ auto.name }}">
+<h2>{{ auto.about }}</h2>
+<h3>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h3>
+{% endfor %}
